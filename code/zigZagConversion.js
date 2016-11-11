@@ -12,14 +12,16 @@ var convert = function(s, numRows) {
         array.push('');
     }
 
-    for(var i in s){
-        var lineNumber = i%n;
+    for(var j in s){
+        var lineNumber = j%n;
         if(lineNumber < numRows){
-            array[lineNumber] += s[i];
+            array[lineNumber] += s[j];
         } else {
-            array[2*numRows - lineNumber - 2] += s[i];
+            array[2*numRows - lineNumber - 2] += s[j];
         }
     }
 
     return array.join('');
 };
+
+convert('PAYPALISHIRING', 3)
