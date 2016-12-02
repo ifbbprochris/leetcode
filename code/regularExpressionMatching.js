@@ -6,7 +6,6 @@
 var isMatch = function(s, p) {
     var regMap = [];
     buildMap(regMap, p);
-    console.log(regMap);
     return matchReg(s, 0);
 
     function buildMap(map, reg) {
@@ -22,7 +21,6 @@ var isMatch = function(s, p) {
     }
 
     function matchReg(str, index) {
-        console.log(str, index);
         if (index === regMap.length) {
             return str === "" ? true : false;
         }
